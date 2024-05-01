@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Advertising Site</title>
+<!-- Codice per AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5715377251074003" crossorigin="anonymous"></script>
 <style>
   /* CSS per il layout */
   body {
@@ -49,39 +51,50 @@
   <!-- Annunci pubblicitari ai lati -->
   <div id="leftAd" class="ad">
     <!-- Contenuto del primo annuncio -->
-    <img src="left_ad_image.jpg" alt="Left Advertisement">
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-5715377251074003"
+      data-ad-slot="1234567890"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
   </div>
   <div id="rightAd" class="ad">
     <!-- Contenuto del secondo annuncio -->
-    <img src="right_ad_image.jpg" alt="Right Advertisement">
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-5715377251074003"
+      data-ad-slot="0987654321"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
   </div>
 
   <!-- Pulsante per attivare l'audio -->
   <button id="audioButton">Attiva audio</button>
 
   <!-- Audio di sottofondo -->
-  <audio id="backgroundAudio" src="data/background_audio.mp3"></audio>
+  <audio id="backgroundAudio" src="background_audio.mp3"></audio>
 
+  <!-- JavaScript per il reindirizzamento e l'audio di sottofondo -->
   <script>
-    // JavaScript per il reindirizzamento e l'audio di sottofondo
     document.addEventListener("DOMContentLoaded", function() {
       var audio = document.getElementById('backgroundAudio');
       var audioButton = document.getElementById('audioButton');
 
-      // Gestione del clic sul pulsante per attivare l'audio
       audioButton.addEventListener('click', function() {
         audio.play();
-        // Nasconde il pulsante dopo aver avviato l'audio
         audioButton.style.display = 'none';
-        // Inizia a monitorare la riproduzione audio
         audio.addEventListener('ended', function() {
-          // Reindirizzamento dopo che l'utente ha ascoltato completamente l'audio
           setTimeout(function() {
-            window.location.href = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
-          }, 0300);
+            window.location.href = "https://example.com";
+          }, 2000);
         });
       });
     });
+  </script>
+
+  <!-- Codice per AdSense -->
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 </body>
 </html>
